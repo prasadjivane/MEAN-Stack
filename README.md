@@ -18,5 +18,8 @@ ng serve
 
 app running at localhost:4200
 
+# Output
+[![MEAN-Stack](UserForm.png)]
+
 # Author
 Prasad Jivane.
