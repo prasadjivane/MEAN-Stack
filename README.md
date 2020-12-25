@@ -21,9 +21,9 @@ app running at localhost:4200
 # Output
 [![MEAN-Stack](UserForm.png)
 ![MEAN-Stack](ListUsers.png)
-[(UpdateUser.png)]
-[(DeleteUser.png)]
-[(Database.png)]
+![MEAN-Stack](UpdateUser.png)
+![MEAN-Stack](DeleteUser.png)
+![MEAN-Stack](Database.png)]
 
 # Author
 Prasad Jivane.
