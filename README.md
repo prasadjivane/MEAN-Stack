@@ -23,7 +23,7 @@ app running at localhost:4200
 ![MEAN-Stack](ListUsers.png)
 ![MEAN-Stack](UpdateUser.png)
 ![MEAN-Stack](DeleteUser.png)
-![MEAN-Stack](database.png)
+![MEAN-Stack](databse.png)
 
 # Author
 Prasad Jivane.
