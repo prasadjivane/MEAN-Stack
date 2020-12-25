@@ -19,7 +19,11 @@ ng serve
 app running at localhost:4200
 
 # Output
-[![MEAN-Stack](UserForm.png)(ListUsers.png) (UpdateUser.png) (DeleteUser.png) (Database.png)]
+[![MEAN-Stack](UserForm.png)]
+[(ListUsers.png)] 
+[(UpdateUser.png)]
+[(DeleteUser.png)]
+[(Database.png)]
 
 # Author
 Prasad Jivane.
