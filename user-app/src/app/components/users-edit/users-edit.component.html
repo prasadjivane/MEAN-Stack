@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+  <div class="col-md-4 submit-user">
+    <div class="card card-outline-secondary">
+      <div class="card-header">
+        <h3 class="mb-0">Edit User</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="inputName">First Name</label>
+            <input class="form-control" type="text" formControlName="firstname">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.firstname.errors?.required">
+              First Name is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputName">Last Name</label>
+            <input class="form-control" type="text" formControlName="lastname">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.lastname.errors?.required">
+              Last Name is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail3">Email</label>
+            <input class="form-control" type="text" formControlName="email">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.required">
+              Enter your email.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.pattern">
+              Enter valid email.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputVerify3">Phone No</label>
+            <input class="form-control" type="text" formControlName="phonenumber">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phonenumber.errors?.required">
+              Enter your phone number.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phonenumber.errors?.pattern">
+              Enter Numbers Only
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputName">Profile Image</label>
+            <input class="form-control" type="text" formControlName="profileimage">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.profileimage.errors?.required">
+              Profile Image is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit" style="background-color: blue;">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

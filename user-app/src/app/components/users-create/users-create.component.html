@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-md-4 submit-user">
+      <div class="card-body">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="inputName">Enter First Name</label>
+            <input class="form-control" type="text" formControlName="firstname">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.firstname.errors?.required">
+              First Name is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputName">Enter Last Name</label>
+            <input class="form-control" type="text" formControlName="lastname">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.lastname.errors?.required">
+              Last Name is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail3">Enter Email Id</label>
+            <input class="form-control" type="text" formControlName="email">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.required">
+              Enter your email.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.pattern">
+              Enter valid email.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputVerify3">Enter Phone Number</label>
+            <input class="form-control" type="number" formControlName="phonenumber">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phonenumber.errors?.required">
+              Enter your phone number.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phonenumber.errors?.pattern">
+              Enter Numbers Only
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="file">Profile Image</label>
+        <input
+            formControlName="profileimage"
+            id="profileimage"
+            type="file"
+            class="form-control"
+            (change)="updateProfile($event)">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.profileimage.errors?.required">
+              Profile Image is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-success btn-md btn-block" style="background-color: blue;" type="submit">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>

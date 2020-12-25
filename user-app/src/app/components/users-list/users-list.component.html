@@ -1,0 +1,34 @@
+<div class="container">
+
+  <p *ngIf="User.length <= 0" class="no-data text-center">There is no user added yet!</p>
+
+  <table class="table table-bordered" *ngIf="User.length > 0">
+    <thead class="table-success">
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email Id</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Profile</th>
+        <th scope="col center">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of User; let i = index">
+        <td>{{user.firstname}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phonenumber}}</td>
+        <td>{{user.profileimage}}</td>
+        <td class="text-center edit-block">
+          <span class="edit" [routerLink]="['/edit-users/', user._id]">
+            <button type="button" class="btn btn-success btn-sm" style="margin: 2px;">Edit</button>
+          </span>
+          <span class="delete" (click)="removeUser(user, i)">
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
